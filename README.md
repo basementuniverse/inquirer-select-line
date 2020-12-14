@@ -2,7 +2,11 @@
 
 select-line prompt for [inquirer](https://github.com/SBoudrias/Inquirer.js)
 
-![demo](https://media.giphy.com/media/xUA7b1MxpngddUvdHW/giphy.gif)
+Forked from https://github.com/adam-golab/inquirer-select-line
+
+## Changes in this fork
+
+* Now accepts a `default` option (number or Function) so we can set the initially-selected line
 
 ## Installation
 
@@ -36,6 +40,8 @@ Change `selectLine` to whatever you might prefer.
 -**choices**: (*Array*|*Function*) Choices array or a function returning a choices array. If defined as a function, the first parameter will be the current inquirer session answers. Array values have to be simple strings. The choices array can also contain [a Separator](https://github.com/SBoudrias/Inquirer.js/#separator).
 
 -**placeholder** (*String*|*Function*) The name to display as a placeholder for chosen line. If defined as a function, the first parameter will be index of currently chosen answer. (optional) default: `INSERT HERE`.
+
+-**default** (*number*|*Function*) The initially selected index in the choices array. If this is a function, the current answers hash will be passed in.
 
 #### Example
 

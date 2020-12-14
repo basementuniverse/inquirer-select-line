@@ -46,7 +46,7 @@ function Prompt(...args) {
     prefix: chalk.green('?')
   },
   this.previousAnswers = args[2];
-  this.selected = 0;
+  this.selected = 'default' in args[0] ? args[0].default : 0;
   this.paginator = new Paginator();
   this.firstRender = true;
   if (typeof this.opt.placeholder === 'function') {
